@@ -15,10 +15,33 @@ pipeline {
             }
         }
 
-        stage('Run Playwright Tests') {
+        stage('Run Tests') {
             steps {
                 bat 'npx playwright test'
             }
+        }
+
+        stage('Generate Allure Report') {
+            steps {
+                bat 'allure generate allure-results --clean -o allure-report'
+            }
+        }
+    }
+
+    post {
+
+        always {
+
+            publishHTML([
+                allowMissing: true,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'playwright-report',
+                reportFiles: 'index.html',
+                reportName: 'Playwright Report'
+            ])
+
+            archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
         }
     }
 }
