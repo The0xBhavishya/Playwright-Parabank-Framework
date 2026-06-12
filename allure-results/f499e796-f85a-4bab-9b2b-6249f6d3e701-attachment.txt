@@ -1,0 +1,7 @@
+Login API Response :
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><customer><id>13877</id><firstName>Bhavishya</firstName><lastName>Goyal</lastName><address><street>Aashiyana Living PG &amp; Guest House</street><city>Jaipur</city><state>RAJASTHAN</state><zipCode>302033</zipCode></address><phoneNumber>9521842144</phoneNumber><ssn>123456789</ssn></customer>
+Extracted Customer ID : 13877
+Before Transfer
+<?xml version="1.0" encoding="UTF-8"?><accounts><account><id>16119</id><customerId>13877</customerId><type>CHECKING</type><balance>115.50</balance></account><account><id>16674</id><customerId>13877</customerId><type>CHECKING</type><balance>200.00</balance></account><account><id>16896</id><customerId>13877</customerId><type>SAVINGS</type><balance>100.00</balance></account><account><id>17340</id><customerId>13877</customerId><type>CHECKING</type><balance>100.00</balance></account></accounts>
+After Transfer
+<?xml version="1.0" encoding="UTF-8"?><accounts><account><id>16119</id><customerId>13877</customerId><type>CHECKING</type><balance>15.50</balance></account><account><id>16674</id><customerId>13877</customerId><type>CHECKING</type><balance>300.00</balance></account><account><id>16896</id><customerId>13877</customerId><type>SAVINGS</type><balance>100.00</balance></account><account><id>17340</id><customerId>13877</customerId><type>CHECKING</type><balance>100.00</balance></account></accounts>

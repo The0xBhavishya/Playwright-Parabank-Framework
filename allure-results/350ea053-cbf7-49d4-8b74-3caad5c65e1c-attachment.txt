@@ -1,0 +1,3 @@
+Login API Response :
+Invalid username and/or password
+Extracted Customer ID : undefined

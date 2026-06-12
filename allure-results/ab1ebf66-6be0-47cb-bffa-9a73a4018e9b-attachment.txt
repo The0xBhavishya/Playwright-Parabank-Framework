@@ -1,0 +1,7 @@
+Generated Account Number :  14121
+Created Account:  14121
+Login API Response :
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><customer><id>12545</id><firstName>Bhavishya</firstName><lastName>Goyal</lastName><address><street>Aashiyana Living PG &amp; Guest House</street><city>Jaipur</city><state>RAJASTHAN</state><zipCode>302033</zipCode></address><phoneNumber>9521842144</phoneNumber><ssn>123456789</ssn></customer>
+Extracted Customer ID : 12545
+API Response :  <?xml version="1.0" encoding="UTF-8"?><accounts><account><id>13677</id><customerId>12545</customerId><type>CHECKING</type><balance>215.50</balance></account><account><id>13788</id><customerId>12545</customerId><type>CHECKING</type><balance>200.00</balance></account><account><id>14121</id><customerId>12545</customerId><type>CHECKING</type><balance>100.00</balance></account></accounts>
+Account Found :  true

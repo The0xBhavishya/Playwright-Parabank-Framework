@@ -1,0 +1,8 @@
+Login API Response :
+Invalid username and/or password
+Extracted Customer ID : undefined
+Customer ID : undefined
+URL : https://parabank.parasoft.com/parabank/services/bank/customers/undefined/accounts
+Status Code : 404
+Response Body :
+

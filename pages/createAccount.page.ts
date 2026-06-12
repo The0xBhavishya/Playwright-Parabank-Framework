@@ -1,0 +1,50 @@
+import {expect,Page} from "@playwright/test";
+import data from "../testdata/createAccount.json";
+
+class CreateAccount {
+
+    page: Page;
+    openNewAccountLink: any;
+    accountType: any;
+    fromAccount: any;
+    openAccountBtn: any;
+    successMsg: any;
+    accountNumber: any;
+
+    constructor(page:Page) {
+        this.page = page;
+        this.openNewAccountLink =page.locator('a').filter({hasText: 'Open New Account' }).first();
+        this.accountType =page.locator('#type');
+        this.fromAccount = page.locator('#fromAccountId');this.openAccountBtn =page.locator('input[value="Open New Account"]');
+        this.successMsg =page.locator('#openAccountResult');
+        this.accountNumber =page.locator('#newAccountId');
+    }
+
+  async createAccount(accountType:any)  {
+    await this.openNewAccountLink.click();
+    await this.accountType.selectOption(accountType);
+    await this.fromAccount.selectOption({index:0});
+    await this.openAccountBtn.click();
+}
+
+    async verifyAccountCreated() {
+       await expect(this.successMsg).toContainText('Congratulations');
+        await expect(this.accountNumber).toBeVisible();
+    }
+
+    async getAccountNumber() {
+        const accNo =await this.accountNumber.innerText();
+        console.log("Generated Account Number : ",accNo);
+        expect(accNo.trim().length).toBeGreaterThan(0);
+        return accNo;
+    }
+
+    async screenshot() {
+        await this.page.screenshot({
+            path: 'TS01_AccountCreation.png',
+            fullPage: true
+        });
+    }
+}
+
+export default CreateAccount;

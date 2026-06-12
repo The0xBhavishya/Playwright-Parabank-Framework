@@ -1,0 +1,8 @@
+Login API Response :
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><customer><id>13100</id><firstName>Bhavishya</firstName><lastName>Goyal</lastName><address><street>Aashiyana Living PG &amp; Guest House</street><city>Jaipur</city><state>RAJASTHAN</state><zipCode>302033</zipCode></address><phoneNumber>9521842144</phoneNumber><ssn>123456789</ssn></customer>
+Extracted Customer ID : 13100
+Customer ID : 13100
+URL : https://parabank.parasoft.com/parabank/services/bank/customers/13100/accounts
+Status Code : 200
+Response Body :
+<?xml version="1.0" encoding="UTF-8"?><accounts><account><id>14898</id><customerId>13100</customerId><type>CHECKING</type><balance>515.50</balance></account></accounts>

@@ -1,0 +1,4 @@
+Login API Response :
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><customer><id>12656</id><firstName>Bhavishya</firstName><lastName>Goyal</lastName><address><street>Aashiyana Living PG &amp; Guest House</street><city>Jaipur</city><state>RAJASTHAN</state><zipCode>302033</zipCode></address><phoneNumber>9521842144</phoneNumber><ssn>123456789</ssn></customer>
+Extracted Customer ID : 12656
+Response Time : 4288
