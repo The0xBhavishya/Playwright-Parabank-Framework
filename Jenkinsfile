@@ -33,14 +33,16 @@ pipeline {
         always {
 
             publishHTML([
-                allowMissing: true,
+                allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
                 reportDir: 'playwright-report',
                 reportFiles: 'index.html',
-                reportName: 'Playwright Report'
+                reportName: 'Playwright Report',
+                includes: '**/*'
             ])
 
+            archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
             archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
         }
     }
