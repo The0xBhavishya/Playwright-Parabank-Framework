@@ -40,11 +40,9 @@ class CreateAccount {
     }
 
     async screenshot() {
-        await this.page.screenshot({
-            path: 'TS01_AccountCreation.png',
-            fullPage: true
-        });
+          await this.page.screenshot({path: 'screenshots/TS01_AccountCreation.png',fullPage: true});
     }
+
 }
 
 export default CreateAccount;

@@ -10,8 +10,6 @@ test('TS-02,Congratulations Message Validation', async ({page}) => {
     await createAccount.createAccount('0');
     await expect(page.locator('#openAccountResult')).toContainText('Congratulations, your account is now open.');
     await expect(page.locator('#newAccountId') ).toBeVisible();
-    await page.screenshot(
-        {path: 'TS02_MessageValidation.png',fullPage: true }
-    );
+   await page.screenshot({path: 'screenshots/TS02.png'});
     await login.logout();
 });

@@ -18,6 +18,7 @@ for (const acc of data) {
     const accountNo =await createAccount.getAccountNumber();
     console.log("Account Number : ",accountNo);
     await createAccount.screenshot();
+    // await page.screenshot({path: 'screenshots/TS13.png'});
     await login.logout();
     });
 }

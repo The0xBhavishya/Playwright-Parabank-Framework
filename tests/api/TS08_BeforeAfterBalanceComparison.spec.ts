@@ -24,5 +24,7 @@ test('TS-08 Before After Balance Comparison', async({page,request}) =>{
     console.log(after);
     expect(before).not.toEqual(after);
 
+    await page.screenshot({path: 'screenshots/TS08.png'});
+
     await login.logout();
 });

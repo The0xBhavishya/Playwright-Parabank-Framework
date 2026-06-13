@@ -54,10 +54,7 @@ class Register {
     }
 
     async screenshot() {
-        await this.page.screenshot({
-            path: "parabank_registration.png",
-            fullPage: true
-        });
+        await this.page.screenshot({path: "screenshots/parabank_registration.png",fullPage: true});
     }
 }
 

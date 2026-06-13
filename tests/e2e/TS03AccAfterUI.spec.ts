@@ -22,5 +22,6 @@ test('TS03', async({page,request}) =>{
 
     expect(body).toContain(accountNo);
     console.log("Account Found : ",body.includes(accountNo));
+    await page.screenshot({path: 'screenshots/TS03.png'});
     await login.logout();
 });

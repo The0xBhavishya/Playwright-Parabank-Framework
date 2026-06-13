@@ -37,8 +37,7 @@ class TransferFunds {
     }
 
     async screenshot() {
-          await this.page.screenshot({
-            path: 'TS06TFunds.png' });
+        await this.page.screenshot({path: 'screenshots/TS06TFunds.png' });
     }
 }
 

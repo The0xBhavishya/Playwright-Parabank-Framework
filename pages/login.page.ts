@@ -29,9 +29,7 @@ class Login {
 
 
     async screenshot() {
-        await this.page.screenshot({
-            path: 'login_success.png',fullPage: true
-        });
+        await this.page.screenshot ({path: 'screenshots/login_success.png',fullPage: true});
     }
 
     async logout() {

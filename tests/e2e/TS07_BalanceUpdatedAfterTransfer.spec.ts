@@ -24,6 +24,7 @@ test('TS07 Balance Updated After Transfer', async ({page,request}) => {
     console.log( "AFTER TRANSFER"  );
     console.log( afterBody);
     expect(await transfer.successMsg.textContent()).toContain('Transfer Complete');
+    await page.screenshot({path: 'screenshots/TS07.png'});
 
     await login.logout();
 });
