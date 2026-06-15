@@ -10,5 +10,5 @@ test('TS14 API Response Time', async ({request}) =>{
     let responseTime = endTime -startTime;
     console.log("Response Time :",responseTime );
     expect(r1.status()).toBe(200);
-    expect(responseTime).toBeLessThan(30000);
+    expect(responseTime).toBeLessThan(20000);
 });
