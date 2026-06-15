@@ -1,0 +1,3 @@
+Loan Status : Approved
+Loan Account Number : 16008
+Generated Loan Account Number : 16008

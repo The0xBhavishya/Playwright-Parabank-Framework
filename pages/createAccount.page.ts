@@ -13,9 +13,10 @@ class CreateAccount {
 
     constructor(page:Page) {
         this.page = page;
-        this.openNewAccountLink =page.locator('a').filter({hasText: 'Open New Account' }).first();
+        this.openNewAccountLink = page.getByRole('link', { name: 'Open New Account'});
         this.accountType =page.locator('#type');
-        this.fromAccount = page.locator('#fromAccountId');this.openAccountBtn =page.locator('input[value="Open New Account"]');
+        this.fromAccount = page.locator('#fromAccountId');
+        this.openAccountBtn =page.locator('input[value="Open New Account"]');
         this.successMsg =page.locator('#openAccountResult');
         this.accountNumber =page.locator('#newAccountId');
     }

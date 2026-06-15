@@ -32,6 +32,13 @@ pipeline {
 
         always {
 
+                    allure(
+            includeProperties: false,
+            jdk: '',
+            results: [[path: 'allure-results']]
+        )
+
+
             publishHTML([
                 allowMissing: false,
                 alwaysLinkToLastBuild: true,

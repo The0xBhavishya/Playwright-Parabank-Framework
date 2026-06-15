@@ -1,0 +1,3 @@
+Loan Status : Approved
+Loan Account Number : 19338
+Generated Loan Account Number : 19338
