@@ -13,6 +13,8 @@ test('Account Exists in API After UI Creation', async({page,request}) =>{
     await createAccount.verifyAccountCreated();
     const accountNo =await createAccount.getAccountNumber();
     console.log("Created Account: ",accountNo);
+
+    
     let customerId = await getCustomerId(request,loginData.username,loginData.password);
     let r1 =await request.get(`https://parabank.parasoft.com/parabank/services/bank/customers/${customerId}/accounts`);
     expect(r1.status()).toBe(200);

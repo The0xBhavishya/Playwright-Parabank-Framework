@@ -10,8 +10,8 @@ class Login {
     logoutBtn: any;
     constructor(page:Page) {
         this.page = page;
-        this.username = page.locator('[name="username"]');
-        this.password = page.locator('[name="password"]');
+        this.username = page.getByRole('textbox').first();;
+       this.password = page.locator('[name="password"]');
         this.loginBtn = page.locator('input[value="Log In"]');
         this.logoutBtn = page.locator('text=Log Out');
     }

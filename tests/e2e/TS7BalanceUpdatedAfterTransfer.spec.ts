@@ -5,7 +5,6 @@ import {getCustomerId} from "../../utilis/customerUtils";
 import loginData from "../../testdata/login.json";
 
 test('TS07 Balance Updated After Transfer', async ({page,request}) => {
-
     const login = new Login(page);
     const transfer =new TransferFunds(page);
     await login.navigate();
@@ -18,13 +17,12 @@ test('TS07 Balance Updated After Transfer', async ({page,request}) => {
     console.log(beforeBody);
     await transfer.transferMoney();
     await transfer.verifyTransfer();
-    let afterResponse =await request.get( `https://parabank.parasoft.com/parabank/services/bank/customers/${customerId}/accounts`);
+    let afterResponse =await request.get(`https://parabank.parasoft.com/parabank/services/bank/customers/${customerId}/accounts`);
 
     let afterBody = await afterResponse.text();
-    console.log( "AFTER TRANSFER"  );
-    console.log( afterBody);
+    console.log("AFTER TRANSFER");
+    console.log(afterBody);
     expect(await transfer.successMsg.textContent()).toContain('Transfer Complete');
     await page.screenshot({path: 'screenshots/TS07.png'});
-
     await login.logout();
 });

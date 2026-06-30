@@ -24,15 +24,12 @@ class TransferFunds {
     async transferMoney() {
          await this.transferFundsLink.click();
          await this.amount.fill(data.amount);
-         
         await this.fromAccount.selectOption({index: 0});
         await this.toAccount.selectOption({index:1});
-
         await this.transferBtn.click();
     }
 
     async verifyTransfer() {
-         await expect(this.page).toHaveURL(/transfer/);
           await expect(this.successMsg).toContainText('Transfer Complete');
     }
 

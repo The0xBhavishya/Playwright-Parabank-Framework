@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "acc": "playwright test tests/ui/TS1_accountCreation.spec.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,5 +15,9 @@
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.2",
     "allure-playwright": "^3.10.0"
+  },
+  "dependencies": {
+    "@playwright/mcp": "^0.0.76",
+    "dotenv": "^17.4.2"
   }
 }

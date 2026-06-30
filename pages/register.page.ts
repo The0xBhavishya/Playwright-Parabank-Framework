@@ -31,7 +31,7 @@ class Register {
         this.username = page.locator('[name="customer.username"]');
         this.password = page.locator('[name="customer.password"]');
         this.confirmPassword = page.locator('#repeatedPassword');
-        this.registerBtn = page.locator('input[value="Register"]');
+        this.registerBtn = page.getByRole('button',{name :"Register"});
     }
 
     async navigate() {

@@ -10,12 +10,12 @@ test('S5 Schema Validation', async({request}) => {
          }
     });
     const body = await response.json();
+    console.log(body)
     expect(response.status()).toBe(200);
     expect(body[0]).toHaveProperty('id');
     expect(body[0]).toHaveProperty('customerId');
     expect(body[0]).toHaveProperty('type');
     expect(body[0]).toHaveProperty('balance');
-
     console.log("Account ID :", body[0].id);
     console.log("Customer ID :", body[0].customerId);
 });

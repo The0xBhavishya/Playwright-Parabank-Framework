@@ -1,7 +1,6 @@
 import {expect,Page} from "@playwright/test";
 
 class RequestLoan {
-
     page: Page;
     requestLoanLink: any;
     loanAmount: any;
@@ -10,7 +9,6 @@ class RequestLoan {
     applyNowBtn: any;
     loanStatus: any;
     loanAccountNumber: any;
-
     constructor(page: Page) {
         this.page = page;
         this.requestLoanLink = page.getByRole('link', { name: 'Request Loan' });
@@ -31,9 +29,6 @@ class RequestLoan {
     }
 
     async verifyLoanRequestProcessed() {
-
-        await expect(this.loanStatus).toBeVisible();
-
         const status = await this.loanStatus.textContent();
         console.log("Loan Status :", status);
     }

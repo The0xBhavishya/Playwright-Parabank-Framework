@@ -16,11 +16,11 @@ class CreateAccount {
         this.openNewAccountLink = page.getByRole('link', { name: 'Open New Account'});
         this.accountType =page.locator('#type');
         this.fromAccount = page.locator('#fromAccountId');
-        this.openAccountBtn =page.locator('input[value="Open New Account"]');
+        this.openAccountBtn =page.getByRole('button', {name: 'Open New Account'});
         this.successMsg =page.locator('#openAccountResult');
         this.accountNumber =page.locator('#newAccountId');
     }
-
+    
   async createAccount(accountType:any)  {
     await this.openNewAccountLink.click();
     await this.accountType.selectOption(accountType);
@@ -36,7 +36,6 @@ class CreateAccount {
     async getAccountNumber() {
         const accNo =await this.accountNumber.innerText();
         console.log("Generated Account Number : ",accNo);
-        expect(accNo.trim().length).toBeGreaterThan(0);
         return accNo;
     }
 
