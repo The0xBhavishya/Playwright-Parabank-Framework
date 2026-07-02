@@ -38,7 +38,7 @@ reporter: [
     trace: 'on-first-retry',
     screenshot: 'on',
     video: 'retain-on-failure',
-    headless: false,
+    // headless: false,
      
   },
   
