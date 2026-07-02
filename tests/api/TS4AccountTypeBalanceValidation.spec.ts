@@ -5,7 +5,12 @@ import loginData from "../../testdata/login.json";
 test("Account Type & Balance Validation", async ({request}) =>{
     const CUSTOMERId = await getCustomerId(request, loginData.username, loginData.password);
 
- const response = await request.get(`https://parabank.parasoft.com/parabank/services/bank/customers/${CUSTOMERId}/accounts`
+ const response = await request.get(`https://parabank.parasoft.com/parabank/services/bank/customers/${CUSTOMERId}/accounts`,
+    {
+        headers :{
+            'Accept' : 'application/json',
+        }
+    }
     );
     const body = await response.json();
     console.log(body)

@@ -12,6 +12,6 @@ test('TS06 Successful Fund Transfer',async ({page})=>{
     await transfer.screenshot();
     await login.logout();
 
-  const count=  await page.locator('class="a-size-medium a-color-base"').count();
+ 
   
 });
